@@ -3,17 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: luis <luis@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: lperez-h <lperez-h@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/23 00:31:39 by lperez-h          #+#    #+#             */
-/*   Updated: 2023/05/23 00:36:06 by luis             ###   ########.fr       */
+/*   Updated: 2023/05/26 12:28:26 by lperez-h         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_tolower (int c)
+int	ft_tolower(int c)
 {
-    if (c >= 'a' && c <= 'z')
-        return (c + 32);
-    else 
-        return c;
+	if (c >= 'a' && c <= 'z')
+		return (c + 32);
+	else
+		return (c);
 }

@@ -6,14 +6,15 @@
 /*   By: lperez-h <lperez-h@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/22 10:49:53 by lperez-h          #+#    #+#             */
-/*   Updated: 2023/05/22 10:58:52 by lperez-h         ###   ########.fr       */
+/*   Updated: 2023/05/26 12:56:10 by lperez-h         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isalnum (int c)
+int	ft_isalnum(int c)
 {
-    if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z') || (c >= '0' && c <= '9'))
-        return (1);
-    else 
-        return (0);
+	if ((c >= 'A' && c <= 'Z')
+		|| (c >= 'a' && c <= 'z') || (c >= '0' && c <= '9'))
+		return (1);
+	else
+		return (0);
 }

@@ -6,14 +6,14 @@
 /*   By: lperez-h <lperez-h@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/22 11:07:23 by lperez-h          #+#    #+#             */
-/*   Updated: 2023/05/22 11:10:16 by lperez-h         ###   ########.fr       */
+/*   Updated: 2023/05/26 12:28:59 by lperez-h         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isprint(int c)
+int	ft_isprint(int c)
 {
-    if (c >= 32 && c <= 127)
-        return (1);
-    else
-        return (0);
+	if (c >= 32 && c <= 127)
+		return (1);
+	else
+		return (0);
 }

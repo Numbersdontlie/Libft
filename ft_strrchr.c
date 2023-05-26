@@ -3,25 +3,25 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: luis <luis@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: lperez-h <lperez-h@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/22 23:43:30 by lperez-h          #+#    #+#             */
-/*   Updated: 2023/05/23 00:25:32 by luis             ###   ########.fr       */
+/*   Updated: 2023/05/26 18:34:32 by lperez-h         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char *strrchr (const char *s, int c)
+char	*strrchr(const char *s, int c)
 {
-    const char *last;
-    int i;
+	const char	*last;
+	int			i;
 
-    last = NULL;
-    i = 0;
-    while (s[i] != '\0')
-    {
-        if (s[i] == c)
-            last = s[i]
-        i++;
-    }
-    return (char *last);
+	last = NULL;
+	i = 0;
+	while (s[i] != '\0')
+	{
+		if (s[i] == c)
+			last = s[i];
+		i++;
+	}
+	return (char *last);
 }

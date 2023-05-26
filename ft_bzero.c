@@ -3,22 +3,22 @@
 /*                                                        :::      ::::::::   */
 /*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: luis <luis@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: lperez-h <lperez-h@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/23 12:28:09 by lperez-h          #+#    #+#             */
-/*   Updated: 2023/05/23 13:13:08 by luis             ###   ########.fr       */
+/*   Updated: 2023/05/26 12:47:03 by lperez-h         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void    bzero (void *s, size_t n)
+void	bzero(void *s, size_t n)
 {
-    char *p;
-    
-    *p = s;
-    while (n > 0)
-    {
-        *p = 0;
-        *p++;
-        n--;
-    }
+	char	*p;
+
+	*p = s;
+	while (n > 0)
+	{
+		*p = 0;
+		*p++;
+		n--;
+	}
 }
