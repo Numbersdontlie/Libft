@@ -1,31 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lperez-h <lperez-h@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/25 01:29:15 by lperez-h          #+#    #+#             */
-/*   Updated: 2023/05/25 19:09:14 by lperez-h         ###   ########.fr       */
+/*   Created: 2023/05/25 19:02:45 by lperez-h          #+#    #+#             */
+/*   Updated: 2023/05/26 08:07:00 by lperez-h         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 
-void    *calloc(size_t nmemb, size_t size)
+char *strdup (const char *s)
 {
-    size_t total;
-    void *memory;
-    char *ptr;
-    size_t i;
+    char *new;
+    size_t length; 
 
-    total = (nmemb * size);
-    memory = malloc(total);
-    if (memory != NULL)
-        ptr = (char*)memory;
-    while (i < total)
-    {
-        ptr[i] = 0;
-        i++;
-    }
-    return memory;
+    if (s == NULL)
+        return NULL;
+    length = ft_strlen(s);
+    new = (char*)malloc((length + 1) * sizeof(char));
+    if (new != NULL)
+        ft_strcpy(new, s);
+    return (new);
 }
