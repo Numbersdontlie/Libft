@@ -6,27 +6,14 @@
 /*   By: lperez-h <lperez-h@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/16 16:50:04 by lperez-h          #+#    #+#             */
-/*   Updated: 2023/05/26 12:55:01 by lperez-h         ###   ########.fr       */
+/*   Updated: 2023/05/31 19:28:37 by lperez-h         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalpha(char *str)
+int	ft_isalpha(int c)
 {
-	int	i;
-
-	i = 0;
-	if (*str == '\0')
-	{
+	if ((str[i] >= 'a' && str[i] <= 'z') || (str[i] >= 'A' && str[i] <= 'Z'))
 		return (1);
-	}
-	while (str[i] != '\0')
-	{
-		if (str[i] >= 'a' && str[i] <= 'z')
-			i++;
-		if (str[i] >= 'A' && str[i] <= 'Z')
-			i++;
-		else
-			return (0);
-	}
-	return (1);
+	else
+		return (0);
 }
