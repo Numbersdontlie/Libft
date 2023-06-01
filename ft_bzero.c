@@ -6,11 +6,11 @@
 /*   By: lperez-h <lperez-h@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/23 12:28:09 by lperez-h          #+#    #+#             */
-/*   Updated: 2023/05/26 12:47:03 by lperez-h         ###   ########.fr       */
+/*   Updated: 2023/06/01 23:10:02 by lperez-h         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	bzero(void *s, size_t n)
+void	ft_bzero(void *s, size_t n)
 {
 	char	*p;
 

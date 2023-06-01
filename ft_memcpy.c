@@ -6,11 +6,11 @@
 /*   By: lperez-h <lperez-h@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/23 13:45:52 by lperez-h          #+#    #+#             */
-/*   Updated: 2023/05/26 15:14:18 by lperez-h         ###   ########.fr       */
+/*   Updated: 2023/06/01 23:08:28 by lperez-h         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*memcpy(void *dest, const void *src, size_t n)
+void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
 	char	*destino;
 	char	*fuente;
