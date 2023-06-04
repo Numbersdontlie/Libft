@@ -6,9 +6,11 @@
 /*   By: lperez-h <lperez-h@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/25 01:29:15 by lperez-h          #+#    #+#             */
-/*   Updated: 2023/06/01 23:09:47 by lperez-h         ###   ########.fr       */
+/*   Updated: 2023/06/04 16:28:53 by lperez-h         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include<stdlib.h>
 
 void	*ft_calloc(size_t nmemb, size_t size)
 {
