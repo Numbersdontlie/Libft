@@ -6,9 +6,11 @@
 /*   By: lperez-h <lperez-h@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/02 23:49:35 by lperez-h          #+#    #+#             */
-/*   Updated: 2023/06/03 00:58:12 by lperez-h         ###   ########.fr       */
+/*   Updated: 2023/06/08 17:23:49 by lperez-h         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {

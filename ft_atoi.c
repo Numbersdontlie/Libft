@@ -6,9 +6,11 @@
 /*   By: lperez-h <lperez-h@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/22 16:59:42 by lperez-h          #+#    #+#             */
-/*   Updated: 2023/06/01 23:10:09 by lperez-h         ###   ########.fr       */
+/*   Updated: 2023/06/08 17:26:52 by lperez-h         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_atoi(const char *nptr)
 {

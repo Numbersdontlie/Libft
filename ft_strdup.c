@@ -6,9 +6,11 @@
 /*   By: lperez-h <lperez-h@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/25 19:02:45 by lperez-h          #+#    #+#             */
-/*   Updated: 2023/06/01 23:08:57 by lperez-h         ###   ########.fr       */
+/*   Updated: 2023/06/08 17:24:15 by lperez-h         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 char	*ft_strdup(const char *s)
 {

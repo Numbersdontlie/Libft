@@ -6,9 +6,11 @@
 /*   By: lperez-h <lperez-h@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/23 12:28:09 by lperez-h          #+#    #+#             */
-/*   Updated: 2023/06/01 23:10:02 by lperez-h         ###   ########.fr       */
+/*   Updated: 2023/06/08 17:26:38 by lperez-h         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 void	ft_bzero(void *s, size_t n)
 {
