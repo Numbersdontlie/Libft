@@ -6,7 +6,7 @@
 /*   By: lperez-h <lperez-h@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/23 12:28:09 by lperez-h          #+#    #+#             */
-/*   Updated: 2023/06/08 17:26:38 by lperez-h         ###   ########.fr       */
+/*   Updated: 2023/06/12 13:52:11 by lperez-h         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,14 @@
 
 void	ft_bzero(void *s, size_t n)
 {
-	char	*p;
+	unsigned char	*ptr;
+	size_t			i;
 
-	*p = s;
-	while (n > 0)
+	i = 0;
+	ptr = (unsigned char *)s;
+	while (i < n)
 	{
-		*p = 0;
-		*p++;
-		n--;
+		*ptr++ = '\0';
+		i++;
 	}
 }

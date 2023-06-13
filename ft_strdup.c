@@ -6,7 +6,7 @@
 /*   By: lperez-h <lperez-h@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/25 19:02:45 by lperez-h          #+#    #+#             */
-/*   Updated: 2023/06/08 17:24:15 by lperez-h         ###   ########.fr       */
+/*   Updated: 2023/06/13 16:31:47 by lperez-h         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,22 @@
 char	*ft_strdup(const char *s)
 {
 	char	*new;
-	size_t	length;
+	char	*result;
+	size_t	i;
 
-	if (s == NULL)
+	i = 0;
+	while (s[i] != '\0')
+		i++;
+	new = (char *)malloc(i + 1);
+	if (new == NULL)
 		return (NULL);
-	length = ft_strlen(s);
-	new = (char *)malloc((length + 1) * sizeof(char));
-	if (new != NULL)
-		ft_strcpy(new, s);
-	return (new);
+	result = new;
+	while (*s)
+	{
+		*new = *s;
+		new++;
+		s++;
+	}
+	*new = '\0';
+	return (result);
 }

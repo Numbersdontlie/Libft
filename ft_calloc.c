@@ -6,7 +6,7 @@
 /*   By: lperez-h <lperez-h@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/25 01:29:15 by lperez-h          #+#    #+#             */
-/*   Updated: 2023/06/08 17:26:31 by lperez-h         ###   ########.fr       */
+/*   Updated: 2023/06/13 14:55:31 by lperez-h         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,19 +14,11 @@
 
 void	*ft_calloc(size_t nmemb, size_t size)
 {
-	size_t	total;
 	void	*memory;
-	char	*ptr;
-	size_t	i;
 
-	total = (nmemb * size);
-	memory = malloc(total);
-	if (memory != NULL)
-		ptr = (char *)memory;
-	while (i < total)
-	{
-		ptr[i] = 0;
-		i++;
-	}
+	memory = (void *)malloc(nmemb * size);
+	if (memory == NULL)
+		return (0);
+	ft_bzero(memory, (nmemb * size));
 	return (memory);
 }

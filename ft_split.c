@@ -1,37 +1,53 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lperez-h <lperez-h@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/22 16:59:42 by lperez-h          #+#    #+#             */
-/*   Updated: 2023/06/13 17:13:19 by lperez-h         ###   ########.fr       */
+/*   Created: 2023/06/13 23:02:27 by lperez-h          #+#    #+#             */
+/*   Updated: 2023/06/14 00:03:29 by lperez-h         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(const char *nptr)
+static size_t	words(char const *s, char c)
 {
-	int	sign;
-	int	result;
+	size_t l;
 
-	sign = 1;
-	result = 0;
-	while (*nptr == ' ' || *nptr == '\t' || *nptr == '\n'
-		|| *nptr == '\v' || *nptr == '\f' || *nptr == '\r')
-		nptr++;
-	if (*nptr == '-' || *nptr == '+')
+	l = 0; 
+	while ((*s) && (*s != c))
 	{
-		if (*nptr == '-')
-			sign *= -1;
-			nptr++;
+		l++;
+		s++;
 	}
-	while ((*nptr >= '0') && (*nptr <= '9'))
+	return (l);
+}
+static size_t	csplit(char const *s, char c)
+{
+	size_t	count;
+	size_t	cfound;
+
+	count = 0;
+	cfound = 1;
+	if (s == NULL)
+		return (0);
+	while (*s)
 	{
-		result = ((result * 10) + (*nptr - '0'));
-		nptr++;
+		if ((*s != c) && (cfound))
+		{
+			count++;
+			cfound = 0;
+		}
+		if ((*s == c))
+			cfound = 1
+		s++;
 	}
-	return (result * sign);
+	return (count);
+} 
+
+char	**ft_split(char const *s, char c)
+{
+
 }
