@@ -6,7 +6,7 @@
 /*   By: lperez-h <lperez-h@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/13 23:02:27 by lperez-h          #+#    #+#             */
-/*   Updated: 2023/06/14 00:03:29 by lperez-h         ###   ########.fr       */
+/*   Updated: 2023/06/15 18:58:07 by lperez-h         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,51 @@ static size_t	csplit(char const *s, char c)
 	return (count);
 } 
 
+static int	wword(const char *s, char **d, char c)
+{
+	char	*temp;
+	*d = (char *)malloc((sizeof(char) * (words(s, c) + 1)));
+	if(*d == NULL)
+		return (NULL);
+	temp = *d;
+	while ((*s) && (*s != c))
+		*temp++ = *s++;
+		*temp = '\0';
+		return (1);
+}
+
+static void	ft_free(char **s1, char **s2)
+{
+	while (s2 != s1)
+		free(*s2);
+	free(s1);
+}
+
 char	**ft_split(char const *s, char c)
 {
-
+	char **resultado;
+	char **ptr;
+	size_t count;
+	
+	count = csplit(s, c);
+	resultado = malloc(sizeof(char *)*(count + 1));
+	if ((resultado == NULL) || (s == NULL))
+		return (NULL);
+	ptr = resultado;
+	while (*s == c)
+		s++;
+	while (count--)
+	{
+		if (wword(s, ptr, c) == 0)
+		{
+			ft_free(resultado, ptr);
+			return (NULL);
+		}
+		s = s + words(s, c);
+		while (*s == c)
+			s++;
+		ptr++;
+	}
+	*ptr = NULL;
+	return (resultado);
 }
