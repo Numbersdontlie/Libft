@@ -6,7 +6,7 @@
 /*   By: lperez-h <lperez-h@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/02 23:49:35 by lperez-h          #+#    #+#             */
-/*   Updated: 2023/06/08 17:23:49 by lperez-h         ###   ########.fr       */
+/*   Updated: 2023/06/16 19:02:00 by lperez-h         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	result = (char *)malloc(len1 + len2 + 1);
 	if (result == NULL)
 		return (NULL);
-	ft_strlcpy(result, s1);
-	ft_strlcat(result, s2);
+	ft_strlcpy(result, s1, len1);
+	ft_strlcat(result, s2, len2);
 	return (result);
 	free(result);
 }

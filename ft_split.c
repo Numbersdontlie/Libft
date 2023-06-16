@@ -6,7 +6,7 @@
 /*   By: lperez-h <lperez-h@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/13 23:02:27 by lperez-h          #+#    #+#             */
-/*   Updated: 2023/06/15 18:58:07 by lperez-h         ###   ########.fr       */
+/*   Updated: 2023/06/16 19:28:36 by lperez-h         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 static size_t	words(char const *s, char c)
 {
-	size_t l;
+	size_t	l;
 
-	l = 0; 
+	l = 0;
 	while ((*s) && (*s != c))
 	{
 		l++;
@@ -24,6 +24,7 @@ static size_t	words(char const *s, char c)
 	}
 	return (l);
 }
+
 static size_t	csplit(char const *s, char c)
 {
 	size_t	count;
@@ -41,23 +42,24 @@ static size_t	csplit(char const *s, char c)
 			cfound = 0;
 		}
 		if ((*s == c))
-			cfound = 1
+			cfound = 1;
 		s++;
 	}
 	return (count);
-} 
+}
 
 static int	wword(const char *s, char **d, char c)
 {
 	char	*temp;
+
 	*d = (char *)malloc((sizeof(char) * (words(s, c) + 1)));
-	if(*d == NULL)
-		return (NULL);
+	if (*d == NULL)
+		return (0);
 	temp = *d;
 	while ((*s) && (*s != c))
 		*temp++ = *s++;
-		*temp = '\0';
-		return (1);
+	*temp = '\0';
+	return (1);
 }
 
 static void	ft_free(char **s1, char **s2)
@@ -69,12 +71,12 @@ static void	ft_free(char **s1, char **s2)
 
 char	**ft_split(char const *s, char c)
 {
-	char **resultado;
-	char **ptr;
-	size_t count;
-	
+	char	**resultado;
+	char	**ptr;
+	size_t	count;
+
 	count = csplit(s, c);
-	resultado = malloc(sizeof(char *)*(count + 1));
+	resultado = malloc(sizeof(char *) * (count + 1));
 	if ((resultado == NULL) || (s == NULL))
 		return (NULL);
 	ptr = resultado;
