@@ -6,7 +6,7 @@
 /*   By: lperez-h <lperez-h@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/16 12:38:08 by lperez-h          #+#    #+#             */
-/*   Updated: 2023/06/16 19:37:43 by lperez-h         ###   ########.fr       */
+/*   Updated: 2023/06/20 23:36:55 by lperez-h         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,10 @@ static int	ft_size(int n)
 
 	i = 0;
 	if (n <= 0)
-	{
 		i = 1;
-	}
-	while (i != 0)
+	while (n)
 	{
-		i /= 10;
+		n /= 10;
 		i++;
 	}
 	return (i);
@@ -48,7 +46,7 @@ char	*ft_itoa(int n)
 			str[--len] = '8';
 			n /= 10;
 		}
-		n *= -1;
+		n = -n;
 	}
 	while (len-- && n != 0)
 	{
