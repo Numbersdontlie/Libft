@@ -1,41 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lperez-h <lperez-h@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/02 23:49:35 by lperez-h          #+#    #+#             */
-/*   Updated: 2023/06/20 02:41:37 by lperez-h         ###   ########.fr       */
+/*   Created: 2023/06/20 00:36:33 by lperez-h          #+#    #+#             */
+/*   Updated: 2023/06/20 01:31:11 by lperez-h         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strjoin(char const *s1, char const *s2)
+void	ft_putstr_fd(char *s, int fd)
 {
-	size_t	len;
-	size_t	j;
-	size_t	i;
-	char	*result;
-
-	len = ft_strlen(s1) + ft_strlen(s2);
-	result = (char *)malloc(sizeof(char) * (len + 1));
-	if (!result)
-		return (NULL);
-	i = 0;	
-	while (*(s1 + i))
+	while (*s)
 	{
-		*(result + i) = ((char) * (s2 + j));
-		i++;
+		ft_putchar_fd(*s, fd);
+		s++;
 	}
-	j = 0;
-	while (*(s2 + j))
-	{
-		*(result + i) = ((char) *(s2 + j));
-		j++;
-		i++;
-	}
-	*(result + i) = '\0';
-	return (result);
 }
