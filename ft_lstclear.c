@@ -1,36 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_lstclear.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lperez-h <lperez-h@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/22 16:59:42 by lperez-h          #+#    #+#             */
-/*   Updated: 2023/06/23 22:15:06 by lperez-h         ###   ########.fr       */
+/*   Created: 2023/06/24 00:08:20 by lperez-h          #+#    #+#             */
+/*   Updated: 2023/06/24 02:19:53 by lperez-h         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(const char *nptr)
+void	ft_lstclear(t_list **lst, void (*del)(void*))
 {
-	int	sign;
-	int	result;
+	t_list	*uno;
+	t_list	*next;
 
-	sign = 1;
-	while (((*nptr >= 9) && (*nptr <= 13)) || (*nptr == 32))
-		nptr++;
-	if ((*nptr == 43) || (*nptr == 45))
+	if ((lst == NULL) || (*lst == NULL) || (del == NULL))
+		return ;
+	uno = *lst;
+	next = NULL;
+	while (uno != NULL)
 	{
-		if (*nptr == 45)
-			sign = -1;
-		nptr++;
+		next = uno -> next;
+		del (uno -> content);
+		free (uno);
+		uno = next;
 	}
-	result = 0;
-	while (((*nptr >= 48) && (*nptr <= 57)))
-	{
-		result = ((result * 10) + (*nptr - 48));
-		nptr++;
-	}
-	return (result * sign);
+	*lst = NULL;
 }

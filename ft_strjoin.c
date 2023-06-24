@@ -6,7 +6,7 @@
 /*   By: lperez-h <lperez-h@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/02 23:49:35 by lperez-h          #+#    #+#             */
-/*   Updated: 2023/06/20 23:48:08 by lperez-h         ###   ########.fr       */
+/*   Updated: 2023/06/24 02:15:46 by lperez-h         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	i = 0;
 	while (*(s1 + i))
 	{
-		*(result + i) = ((char) * (s1 + i));
+		*(result + i) = ((char) *(s1 + i));
 		i++;
 	}
 	j = 0;

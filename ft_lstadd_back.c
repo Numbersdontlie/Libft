@@ -1,36 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lperez-h <lperez-h@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/22 16:59:42 by lperez-h          #+#    #+#             */
-/*   Updated: 2023/06/23 22:15:06 by lperez-h         ###   ########.fr       */
+/*   Created: 2023/06/23 23:48:36 by lperez-h          #+#    #+#             */
+/*   Updated: 2023/06/23 23:54:41 by lperez-h         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(const char *nptr)
+void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	int	sign;
-	int	result;
+	t_list	*tmp;
 
-	sign = 1;
-	while (((*nptr >= 9) && (*nptr <= 13)) || (*nptr == 32))
-		nptr++;
-	if ((*nptr == 43) || (*nptr == 45))
+	if ((lst == NULL) || (new == NULL))
+		return ;
+	if (*lst == NULL)
+		*lst = new;
+	else
 	{
-		if (*nptr == 45)
-			sign = -1;
-		nptr++;
+		tmp = *lst;
+		while (tmp -> next != NULL)
+			tmp = tmp -> next;
+		tmp -> next = new;
 	}
-	result = 0;
-	while (((*nptr >= 48) && (*nptr <= 57)))
-	{
-		result = ((result * 10) + (*nptr - 48));
-		nptr++;
-	}
-	return (result * sign);
 }

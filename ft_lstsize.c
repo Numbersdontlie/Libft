@@ -1,36 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_lstsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lperez-h <lperez-h@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/22 16:59:42 by lperez-h          #+#    #+#             */
-/*   Updated: 2023/06/23 22:15:06 by lperez-h         ###   ########.fr       */
+/*   Created: 2023/06/23 23:11:34 by lperez-h          #+#    #+#             */
+/*   Updated: 2023/06/23 23:18:13 by lperez-h         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(const char *nptr)
+int	ft_lstsize(t_list *lst)
 {
-	int	sign;
-	int	result;
+	int	i;
 
-	sign = 1;
-	while (((*nptr >= 9) && (*nptr <= 13)) || (*nptr == 32))
-		nptr++;
-	if ((*nptr == 43) || (*nptr == 45))
-	{
-		if (*nptr == 45)
-			sign = -1;
-		nptr++;
+	i = 0;
+	while (lst != NULL)
+	{	
+		lst = lst -> next;
+		i++;
 	}
-	result = 0;
-	while (((*nptr >= 48) && (*nptr <= 57)))
-	{
-		result = ((result * 10) + (*nptr - 48));
-		nptr++;
-	}
-	return (result * sign);
+	return (i);
 }
