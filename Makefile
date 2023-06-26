@@ -25,7 +25,7 @@ ${NAME}: ${OBJS}
 #	cc -o TEST ${SRCS} ${FLAGS}
 
 clean:
-	rm -f ${OBJS}
+	rm -f ${OBJS} ${OBJSBNS}
 
 fclean: clean
 	rm -f ${NAME} 

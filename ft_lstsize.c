@@ -6,7 +6,7 @@
 /*   By: lperez-h <lperez-h@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/23 23:11:34 by lperez-h          #+#    #+#             */
-/*   Updated: 2023/06/23 23:18:13 by lperez-h         ###   ########.fr       */
+/*   Updated: 2023/06/26 18:24:52 by lperez-h         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int	ft_lstsize(t_list *lst)
 
 	i = 0;
 	while (lst != NULL)
-	{	
+	{
 		lst = lst -> next;
 		i++;
 	}
