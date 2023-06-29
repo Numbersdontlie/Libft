@@ -6,7 +6,7 @@
 /*   By: lperez-h <lperez-h@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/04 14:14:43 by lperez-h          #+#    #+#             */
-/*   Updated: 2023/06/26 19:04:30 by lperez-h         ###   ########.fr       */
+/*   Updated: 2023/06/29 15:03:57 by lperez-h         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,6 @@ char	*ft_strtrim(char const *s1, char const *set)
 {
 	size_t	start;
 	size_t	end;
-	char	*result;
 
 	start = 0;
 	end = ft_strlen(s1) - 1;
